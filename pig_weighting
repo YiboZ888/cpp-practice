@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //There are 3 pigs to bge weighted, determine which one is the heaviest
+    int pig1, pig2, pig3;
+    cout << "Enter the weight of pig1 (in lbs): " << endl;
+    cin >> pig1;
+    cout << "Enter the weight of pig2 (in lbs): " << endl;
+    cin >> pig2;
+    cout << "Enter the weight of pig3 (in lbs): " << endl;
+    cin >> pig3;
+    
+    cout << "The weight of pig 1 is: " << pig1 << " lbs" << endl;
+    cout << "The weight of pig 2 is: " << pig2 << " lbs" << endl;
+    cout << "The weight of pig 3 is: " << pig3 << " lbs" << endl;
+    
+    //Determine which is the heaviest
+    //Determine pig 1 and pig 2
+    if (pig1 > pig2) //pig 1 is heavier than pig 2
+    {
+        if (pig1 > pig3) //pig 1 is heavier than pig 3
+        {
+            cout << "Pig 1 is the heaviest." << endl;
+        }
+        else //pig 3 is heavier than pig 1
+        {
+            cout << "Pig 3 is the heaviest." << endl;
+        }
+    }
+    
+    else //pig 2 is heavier than pig 1
+    {
+        if (pig2 > pig3) //pig 2 is heavier than pig 3
+        {
+            cout << "Pig 2 is the heaviest." << endl;
+        }
+        else //pig 3 is heavier than pig 2
+        {
+            cout << "Pig 3 is the heaviest." << endl;
+        }
+    }
+
+    
+    return 0;
+}
