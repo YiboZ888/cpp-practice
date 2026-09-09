@@ -3,46 +3,39 @@ using namespace std;
 
 int main()
 {
-    //There are 3 pigs to bge weighted, determine which one is the heaviest
-    int pig1, pig2, pig3;
-    cout << "Enter the weight of pig1 (in lbs): " << endl;
-    cin >> pig1;
-    cout << "Enter the weight of pig2 (in lbs): " << endl;
-    cin >> pig2;
-    cout << "Enter the weight of pig3 (in lbs): " << endl;
-    cin >> pig3;
-    
-    cout << "The weight of pig 1 is: " << pig1 << " lbs" << endl;
-    cout << "The weight of pig 2 is: " << pig2 << " lbs" << endl;
-    cout << "The weight of pig 3 is: " << pig3 << " lbs" << endl;
-    
-    //Determine which is the heaviest
-    //Determine pig 1 and pig 2
-    if (pig1 > pig2) //pig 1 is heavier than pig 2
+    // Tell the user to rate the movie
+    cout << "In a scale of 0 to 5, rate the movie: " << endl;
+
+    // User starts rating
+    int score = 0;
+    cin >> score;
+    cout << "The score you rated is: " << score << endl;
+
+    // According to the score that the user rated, tell them the result
+    switch (score)
     {
-        if (pig1 > pig3) //pig 1 is heavier than pig 3
-        {
-            cout << "Pig 1 is the heaviest." << endl;
-        }
-        else //pig 3 is heavier than pig 1
-        {
-            cout << "Pig 3 is the heaviest." << endl;
-        }
-    }
-    
-    else //pig 2 is heavier than pig 1
-    {
-        if (pig2 > pig3) //pig 2 is heavier than pig 3
-        {
-            cout << "Pig 2 is the heaviest." << endl;
-        }
-        else //pig 3 is heavier than pig 2
-        {
-            cout << "Pig 3 is the heaviest." << endl;
-        }
+    case 5:
+        cout << "Masterpiece! You loved it." << endl;
+        break;
+    case 4:
+        cout << "Great movie!" << endl;
+        break;
+    case 3:
+        cout << "Good one." << endl;
+        break;
+    case 2:
+        cout << "It was okay." << endl;
+        break;
+    case 1:
+        cout << "Not great." << endl;
+        break;
+    case 0:
+        cout << "You really didn't like it." << endl;
+        break;
+    default:
+        cout << "Please rate between 0 and 5." << endl;
+        break;
     }
 
-    
     return 0;
 }
-
