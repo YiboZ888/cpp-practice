@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+#include <ctime>
+
+int main()
+{
+    //Narcissistic number
+    //check all the 3-digits numbers
+    int num = 100;
+    
+    do{
+        
+        //Find the narcissistic number in these 3-digits numbers
+        int a = 0; //units digit
+        int b = 0; //tens digit
+        int c = 0; //hundreds digit
+        
+        a = num % 10; //get the units digit
+        b = (num / 10) % 10; //get the tens digits
+        c = num / 100; //get the hundreds digit
+        
+        if (a*a*a + b*b*b + c*c*c == num) //Print the number if it is narcissistic number
+        {
+            cout << num << endl;
+        }
+        num++;
+    }while (num < 1000);
+    
+    
+    return 0;
+}
