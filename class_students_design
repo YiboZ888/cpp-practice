@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+#include <string>
+
+class Student
+{
+ public:
+    string m_Name;
+    int m_Id;
+    
+    void showStudent()
+    {
+        cout << "Name: " << m_Name << " Student ID: " << m_Id << endl;
+    }
+    
+};
+
+int main()
+{
+    Student s1;
+    s1.m_Name = "Jason";
+    s1.m_Id = 203152853;
+    s1.showStudent();
+    
+    Student s2;
+    s2.m_Name = "Roger";
+    s2.m_Id = 203152849;
+    s2.showStudent();
+
+    return 0;
+}
